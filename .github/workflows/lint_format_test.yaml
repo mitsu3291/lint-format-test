@@ -19,17 +19,20 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Install dependencies
-        run: pip install isort mypy black flake8
+      - name: Install pysen
+        run: pip install "pysen[lint]"
+      
+      - name: Check format & lint
+        run: pysen run lint
 
-      - name: Run isort
-        run: isort .
+    #   - name: Run isort
+    #     run: isort .
 
-    #   - name: Run mypy
-    #     run: mypy .
+    # #   - name: Run mypy
+    # #     run: mypy .
 
-      - name: Run black
-        run: black .
+    #   - name: Run black
+    #     run: black .
 
-      - name: Run flake8
-        run: flake8 .
+    #   - name: Run flake8
+    #     run: flake8 .
