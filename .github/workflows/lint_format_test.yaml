@@ -20,7 +20,7 @@ jobs:
           python-version: 3.x
 
       - name: Install pysen
-        run: pip install "pysen[lint]"
+        run: pip install pysen[lint]
       
       - name: Check format & lint
         run: pysen run lint
